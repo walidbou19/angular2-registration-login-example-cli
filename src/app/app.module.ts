@@ -1,6 +1,6 @@
 ﻿import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
@@ -20,6 +20,7 @@ import { RegisterComponent } from './register/index';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatSelectModule, MatOptionModule, MatInputModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
     imports: [
@@ -34,7 +35,9 @@ import {MatCardModule} from '@angular/material/card';
         MatOptionModule,
         MatInputModule,
         BrowserAnimationsModule,
-        MatCardModule
+        MatCardModule,
+        FlexLayoutModule,
+        ReactiveFormsModule
     ],
     declarations: [
         AppComponent,
