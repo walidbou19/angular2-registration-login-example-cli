@@ -1,4 +1,4 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 html, body{
     padding: 0;
@@ -14,6 +14,11 @@ app{
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%)
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
 }
 
 .logo {

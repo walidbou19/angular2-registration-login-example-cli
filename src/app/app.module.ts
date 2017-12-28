@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/index';
@@ -18,9 +19,13 @@ import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatSelectModule, MatOptionModule, MatInputModule} from '@angular/material';
-import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from './material.module';
+
+import { usersRouting } from "./users/users.routing";
+import { UsersModule } from "./users/users.module";
+
+import {CompaniesService} from "./home/shared/companies.service";
 
 @NgModule({
     imports: [
@@ -28,16 +33,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
         FormsModule,
         HttpClientModule,
         routing,
-        MatButtonModule,
-        MatCheckboxModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        MatOptionModule,
-        MatInputModule,
+        HttpModule,
         BrowserAnimationsModule,
-        MatCardModule,
         FlexLayoutModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MaterialModule,
+        UsersModule,
+        usersRouting
     ],
     declarations: [
         AppComponent,
@@ -49,6 +51,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     providers: [
         AuthGuard,
         AlertService,
+        CompaniesService,
         AuthenticationService,
         UserService,
         {

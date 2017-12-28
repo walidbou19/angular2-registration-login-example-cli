@@ -1,0 +1,48 @@
+mat-card {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+mat-toolbar-row {
+    justify-content: space-between;
+}
+
+.done {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+}
+
+.toolbar {
+    padding: 6px;
+}
+.toolbar-icon {
+    padding: 0 14px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+.mat-toolbar{
+    margin: 0 0 2rem;
+}
+
+
+.mat-icon-button {
+    width: auto;
+}
+
+img {
+    background-color: gray;
+}
+
+.demo-card-blue {
+    background-color: #b0becc;
+}
+.mat-card-actions {
+    display: flex;
+    flex-direction: column;
+}
