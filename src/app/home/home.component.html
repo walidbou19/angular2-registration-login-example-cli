@@ -19,14 +19,17 @@
 
     Displaying {{ companies.length }} users.
 
-    <mat-grid-list cols="3" rowHeight="1:1" role="listitem">
-        <mat-grid-tile  *ngFor="let company of companies" >
+    <div  class="row">
+        <div class="col col-md-4 col-xs-12  "  *ngFor="let company of companies" >
             <mat-card>
-                <mat-card-header>
-                    <img mat-card-sm-image src="https://material.angularjs.org/latest/img/washedout.png">
-                    <mat-card-title>{{company.name}}</mat-card-title>
-                    <mat-card-subtitle>{{company.email}}</mat-card-subtitle>
-                </mat-card-header>
+                <div class="card-header">
+                    <div class="col-md-7 ">
+                        <h3>{{company.name}}</h3>
+                        <span>{{company.email}}</span>
+                    </div>
+                    <div class="col-md-5 "><img  src="https://material.angularjs.org/latest/img/washedout.png"></div>
+
+                </div>
                 <mat-card-content>
                     <p>{{company.name}}</p>
                 </mat-card-content>
@@ -34,8 +37,8 @@
                     <button mat-button mat-raised-button color="primary" [routerLink]="['/companies', company.id]" >LIKE</button>
                 </mat-card-actions>
             </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list>
+        </div>
+    </div>
 
    <!-- <mat-card>
         <img mat-card-image src="https://material.angularjs.org/latest/img/washedout.png">

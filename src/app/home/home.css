@@ -1,8 +1,13 @@
 mat-card {
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
     text-align: center;
     width: 100%;
+}
+
+.mat-card-content, .mat-card-header .mat-card-title, .mat-card-subtitle {
+    font-size: 14px;
+    text-align: left;
 }
 
 mat-toolbar-row {
@@ -42,7 +47,18 @@ img {
 .demo-card-blue {
     background-color: #b0becc;
 }
-.mat-card-actions {
-    display: flex;
-    flex-direction: column;
+
+.card-header img {
+    width: 100%;
+    margin: auto;
+    display: block;
+    height: auto;
+}
+
+.card-header{
+   margin: 10px auto;
+    text-align: left;
+}
+.mat-card-header-text{
+    display: none !important;
 }

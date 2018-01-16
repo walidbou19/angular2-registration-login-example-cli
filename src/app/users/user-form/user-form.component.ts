@@ -47,6 +47,8 @@ export class UserFormComponent implements OnInit {
     var id = this.route.params.subscribe(params => {
       var id = params['id'];
 
+      console.log(id);
+
       this.title = id ? 'Edit User' : 'New User';
 
       if (!id)

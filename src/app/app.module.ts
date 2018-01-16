@@ -22,10 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material.module';
 
-import { usersRouting } from "./users/users.routing";
-import { UsersModule } from "./users/users.module";
+import { usersRouting } from './users/users.routing';
+import { UsersModule } from './users/users.module';
 
-import {CompaniesService} from "./home/shared/companies.service";
+import {CompaniesService} from './home/shared/companies.service';
 
 @NgModule({
     imports: [
